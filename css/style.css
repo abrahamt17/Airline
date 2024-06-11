@@ -1,0 +1,519 @@
+body {
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+}
+
+/* General container styling */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* for header part */
+header {
+    
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul li:hover {
+    background-color: #555;
+}
+
+
+/* for footer part */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-info, .footer-links, .footer-social {
+    padding-left: 10px;
+    flex: 1;
+}
+
+.footer-info h3, .footer-links h3, .footer-social h3 {
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 5px;
+}
+.footer-links li a:hover {
+   color: white;
+}
+
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-social li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.footer-social a {
+    color: #fff;
+}
+
+.footer-bottom {
+    background-color: #222;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+/*for home page */
+.main {
+    padding:38px 0;
+}
+
+.hero {
+    background: url('../img/flight.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height:25rem;
+   
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    margin-bottom:10rem;
+    font-size: 36px;
+    color: white;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #cdcaca;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.features {
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.feature {
+    text-align: center;
+}
+
+.feature img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.feature h2 {
+    font-size: 24px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.testimonial {
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 50px 0;
+}
+
+.testimonial h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+blockquote {
+    font-style: italic;
+    font-size: 18px;
+    color: #666;
+}
+
+cite {
+    font-size: 16px;
+    color: #333;
+}
+
+
+/* Flight Search Form */
+.search-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[type="date"] {
+    /* Additional styling for date input */
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* CSS for Autocomplete Dropdown */
+.ui-autocomplete {
+    position: absolute;
+    z-index: 1000;
+    cursor: default;
+    list-style-type: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-height: 200px; /* Limit the max height of the dropdown */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.ui-autocomplete .ui-menu-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.ui-autocomplete .ui-menu-item:hover,
+.ui-autocomplete .ui-state-active {
+    background-color: #f0f0f0;
+}
+
+/* Optional: Highlight matched text */
+.ui-autocomplete .highlight {
+    font-weight: bold;
+    color: #007bff;
+}
+
+
+/* Add styles for search results */
+.search-results {
+    margin-top: 20px;
+}
+
+.search-results h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.search-results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.search-results li {
+    display: flex;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.search-results li:nth-child(even) {
+    background-color: #eaeaea;
+}
+
+.search-results li:hover {
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.search-results li:hover h3 {
+    color: #007bff;
+}
+
+.search-results li h3 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.search-results li p {
+    color: #666;
+    margin-bottom: 0;
+}
+.search-results #book-now{
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+}
+
+/*login page */
+.login-container {
+    width: 350px;
+    margin: 100px auto;
+    background-color: #f6f6f6;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.login-container h1 {
+    text-align: center;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color:black;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+/*for sign-ip page*/
+.signup-form {
+    width: 300px;
+    margin: 50px auto;
+    padding: 25px;
+    background-color: #f8f6f6;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px black;
+    }
+    
+.signup-form  h2 {
+    text-align: center;
+    color: #333;
+}
+
+.signup-form form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+.signup-form input {
+       width: 100%;
+       padding: 10px;
+       border: 1px solid #ccc;
+       border-radius: 5px;
+}
+
+.signup-form button {
+       width: 100%;
+       padding: 10px;
+       background-color:black;
+       color: #fff;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Passenger Form Styling */
+.passenger-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.passenger-form .form-group {
+    margin-bottom: 15px;
+}
+
+.passenger-form .form-group label {
+    display: block;
+    font-weight: bold;
+}
+
+.passenger-form .form-group input[type="text"],
+.passenger-form .form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.passenger-form button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.passenger-form button:hover {
+    background-color: #0056b3;
+}
+
+/* for ticket */
+.ticket {
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+}
+.ticket-header, .ticket-footer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.ticket-body {
+    display: flex;
+    justify-content: space-between;
+}
+.ticket-info, .passenger-info, .flight-info {
+    width: 48%;
+}
+.ticket-info p, .passenger-info p, .flight-info p {
+    margin: 5px 0;
+}
+.ticket-header h1 {
+    margin-bottom: 10px;
+}
+.passenger-info h2 {
+    margin-bottom: 10px;
+}
+/* for social media */
+.footer-social ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social ul li {
+    display: inline;
+}
+
+.footer-social ul li a {
+    color:white; 
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.footer-social ul li a:hover {
+    color: #007bff; 
+}
+
+/* for manage reservation*/
+.booking {
+    border: 1px solid #000;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+    margin-bottom: 20px;
+}
+.booking h2, .booking h3, .booking p {
+    margin: 5px 0;
+}
